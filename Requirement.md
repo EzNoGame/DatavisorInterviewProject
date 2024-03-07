@@ -4,7 +4,7 @@
 1. Download .NET version 17.7.1 to the machine: https://www.nuget.org/packages/Microsoft.NET.Test.Sdk/17.7.1
 2. Download VS Code to the machine: https://code.visualstudio.com/
 3. Under extensions, add C# dev kit to VS Code
-	1. ![Pasted image 20240307161015.png](Pasted image 20240307161015.png)
+	1. ![ScreenShot](Pasted image 20240307161015.png)
 	2. ![Pasted image 20240307161027.png](Pasted image 20240307161027.png)
 4. Clone this repo:
 ```shell
