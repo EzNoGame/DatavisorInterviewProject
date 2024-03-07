@@ -124,6 +124,7 @@ public class Tests
         }
         catch(Exception)
         {
+            Assert.Fail(message: "timeout");
         }
 
         String titleName = "";
