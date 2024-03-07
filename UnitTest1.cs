@@ -146,7 +146,7 @@ public class Tests
     [TearDown]
     public void TearDown()
     {
-        // _driver.Quit();
+        _driver.Quit();
     }
 
     private void EnterFirstProject()
