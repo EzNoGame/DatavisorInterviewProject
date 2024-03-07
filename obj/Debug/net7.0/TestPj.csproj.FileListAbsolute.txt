@@ -97,3 +97,7 @@ F:\Personal File\WorkStuff\DataVisor\InterviewProject\TestPj\obj\Debug\net7.0\re
 F:\Personal File\WorkStuff\DataVisor\InterviewProject\TestPj\obj\Debug\net7.0\TestPj.pdb
 F:\Personal File\WorkStuff\DataVisor\InterviewProject\TestPj\obj\Debug\net7.0\TestPj.genruntimeconfig.cache
 F:\Personal File\WorkStuff\DataVisor\InterviewProject\TestPj\obj\Debug\net7.0\ref\TestPj.dll
+F:\Personal File\WorkStuff\DataVisor\InterviewProject\TestPj\bin\Debug\net7.0\selenium-manager\linux\selenium-manager
+F:\Personal File\WorkStuff\DataVisor\InterviewProject\TestPj\bin\Debug\net7.0\selenium-manager\macos\selenium-manager
+F:\Personal File\WorkStuff\DataVisor\InterviewProject\TestPj\bin\Debug\net7.0\selenium-manager\windows\selenium-manager.exe
+F:\Personal File\WorkStuff\DataVisor\InterviewProject\TestPj\bin\Debug\net7.0\WebDriver.dll
