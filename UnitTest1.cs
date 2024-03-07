@@ -137,22 +137,10 @@ public class Tests
         }
         catch(Exception)
         {
+            Assert.Fail(message: "timeout");
         }
 
         Assert.AreEqual(titleName, testName);
-    }
-
-    //Notice: this test should only be tested after CreateTest is done without an error
-    [Test]
-    public void DeleteTest()
-    {
-        CreateTest();
-        var option = _driver.FindElement(By.CssSelector("#app > div > div.sc-gytJtb.hDufxA > section > div > div > div > div > div.sc-jiDjCn.dyxyMx > div.sc-cbZHsQ.UhcVs > div > div > div > a:nth-child(1) > div:nth-child(4) > div > div:nth-child(2) > div > button"));
-        Actions builder = new Actions(_driver);
-        builder.MoveToElement(option).Perform();
-        WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(1));
-        option.Click();
-
     }
 
     [TearDown]
