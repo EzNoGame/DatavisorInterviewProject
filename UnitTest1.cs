@@ -29,31 +29,59 @@ public class Tests
     [Test]
     public void CreateProject()
     {
+        String ProjectName = "Test Project";
+
+        //wait for the page to be fully loaded
         WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(20));
-        wait.Until(c => c.FindElement(By.CssSelector("#app > div > div.sc-gytJtb.hDufxA > div > div > div > div.sc-NsUQg.cZERUX > div > button")));
-
-        var newProjectButton = _driver.FindElement(By.CssSelector("#app > div > div.sc-gytJtb.hDufxA > div > div > div > div.sc-NsUQg.cZERUX > div > button"));
-        newProjectButton.Click();
-
+        try
+        {
+            wait.Until(c => c.FindElement(By.CssSelector("#app > div > div.sc-gytJtb.hDufxA > div > div > div > div.sc-NsUQg.cZERUX > div > button"))); 
+            var newProjectButton = _driver.FindElement(By.CssSelector("#app > div > div.sc-gytJtb.hDufxA > div > div > div > div.sc-NsUQg.cZERUX > div > button"));
+            newProjectButton?.Click();
+        }
+        catch(Exception)
+        {
+        }
+        
+        //get textfield and create button
         var name = _driver.FindElement(By.Name("name"));
         var url = _driver.FindElement(By.Name("homepageUrl"));
         var createProjectButton = _driver.FindElement(By.CssSelector("#app > div > div.sc-gytJtb.hDufxA > div.sc-bypJrT.jRa-dIJ.backdrop > div > form > div.sc-hIUJlX.eyypRo > button.sc-tagGq.fxwkFr.sc-fXSgeo.cLzWpS"));
-        name.SendKeys("Test Project");
-        url.SendKeys("http://www.google.com");
+        name.SendKeys(ProjectName);
+        url.SendKeys("http://www.dummy.com");
         createProjectButton.Click();
 
-        wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(20));
-        wait.Until(c => c.FindElement(By.CssSelector("#app > div > div.sc-gytJtb.hDufxA > div > div > form")));
+        //wait for new page to be loaded
+        try
+        {
+            wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(20));
+            wait.Until(c => c.FindElement(By.CssSelector("#app > div > div.sc-gytJtb.hDufxA > div > div > form > div.sc-hIUJlX.eyypRo > button.sc-tagGq.fxwkFr.sc-fXSgeo.cLzWpS > div > div.sc-kdBSHD.iMxwCe.sc-hknOHE.ffpPwl")));
+            var x = _driver.FindElement(By.CssSelector("#app > div > div.sc-gytJtb.hDufxA > div > div > button"));
+            x.Click();
+        }
+        catch(Exception)
+        {
+        }
 
-        var popup = _driver.FindElement(By.CssSelector("#app > div > div.sc-gytJtb.hDufxA > div > div > form"));
-        Assert.That(popup, Is.Not.EqualTo(null));
+
+        try
+        {
+            wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(20));
+            wait.Until(c => c.FindElement(By.CssSelector("#app > div > div.sc-gytJtb.hDufxA > section > aside > div > div.sc-jRGJub.hwDTTO > div > div")));
+            var title = _driver.FindElement(By.CssSelector("#app > div > div.sc-gytJtb.hDufxA > section > aside > div > div.sc-jRGJub.hwDTTO > div > div"));
+            Assert.AreEqual("xxx",title.Text);
+        }
+        catch
+        {
+            Assert.Fail();
+        }
+
+        
     }
 
     [TearDown]
     public void TearDown()
     {
-        // Close the browser
-        _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(500);
         // _driver.Quit();
     }
 }
