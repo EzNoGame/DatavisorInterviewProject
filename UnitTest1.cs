@@ -41,6 +41,7 @@ public class Tests
         }
         catch(Exception)
         {
+            Assert.Fail(message: "timeout");
         }
         
         //get textfield and create button
@@ -61,6 +62,7 @@ public class Tests
         }
         catch(Exception)
         {
+            Assert.Fail(message: "timeout");
         }
 
 
@@ -69,19 +71,20 @@ public class Tests
             wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(20));
             wait.Until(c => c.FindElement(By.CssSelector("#app > div > div.sc-gytJtb.hDufxA > section > aside > div > div.sc-jRGJub.hwDTTO > div > div")));
             var title = _driver.FindElement(By.CssSelector("#app > div > div.sc-gytJtb.hDufxA > section > aside > div > div.sc-jRGJub.hwDTTO > div > div"));
-            Assert.AreEqual("xxx",title.Text);
+            Assert.AreEqual(ProjectName,title.Text);//successfully create a preject with expected name
         }
         catch
         {
-            Assert.Fail();
+            Assert.Fail(message: "timeout");
         }
-
-        
     }
+
+    [Test]
+    public void Create
 
     [TearDown]
     public void TearDown()
     {
-        // _driver.Quit();
+        _driver.Quit();
     }
 }
