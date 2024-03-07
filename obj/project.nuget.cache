@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8cj+XHgzIDKlUtSerGGS6v38LsdzBqWigIxuOp3dlgiU2Aplr2s+8JfkoIN7S8ghohNKZ+7+aQNYg8sBM9dUJQ==",
+  "dgSpecHash": "zqK24VaZtLM4ofoZeSPH/K4BysFhPFmu8TZ2qvJmpEs7cF0rI9ltDHa3ss6jQhlssaBjmiZJiF2uhypmwtZW6w==",
   "success": true,
   "projectFilePath": "F:\\Personal File\\WorkStuff\\DataVisor\\InterviewProject\\TestPj\\TestPj.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\Eddy\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
     "C:\\Users\\Eddy\\.nuget\\packages\\nunit.analyzers\\3.6.1\\nunit.analyzers.3.6.1.nupkg.sha512",
     "C:\\Users\\Eddy\\.nuget\\packages\\nunit3testadapter\\4.4.2\\nunit3testadapter.4.4.2.nupkg.sha512",
+    "C:\\Users\\Eddy\\.nuget\\packages\\selenium.webdriver\\4.18.1\\selenium.webdriver.4.18.1.nupkg.sha512",
     "C:\\Users\\Eddy\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
   ],
   "logs": []
