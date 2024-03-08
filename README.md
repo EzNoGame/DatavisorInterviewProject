@@ -1,9 +1,9 @@
 # Introduction
 This is my homework for the interview problem.
-In the repo, there are three files that are not part of the solution:
+In the repo, there are *Three* extra files that are not part of the solution:
 1. README.md, which is this file.
-3. Brainstorm.md, which is a file explaining my thinking process during the process.
-4. Automation_test_Project.docx, the handout.
+3. Brainstorm.md, which is a file explaining my thinking process during the solving process.
+4. Documentation.md, which explains usage and purpose of each function.
 # Notice!
 - this whole tests is developed using *C#* and *selenium* Framework, and using *VS Code* as the only IDE, under OS *Windows 10*. The following instruction are only promised to work under the same environment. 
 # Get Started

@@ -1,0 +1,6 @@
+- in the file UnitTest1.cs, there are five functions, four publics and one private helper function: 
+	- *Setup()*: this function creating the driver and enter the target website, as well as login using the account I have.
+	- *CreatingProject()*: first test, when run, will create a new project called "Test Project", it validates by comparing the creating projects name with the string "Test Project".
+	- *CreateTest()* : second test, when run, will open the project at the top, create a test inside it, and validate by comparing the name of the test at the top with the name we gave the program.
+	- *TearDown()*: get called after every test, close the open chrome window.
+	- *EnterFirstProject()* : helper function to separate functionality, this function will enter the project at the top automatically.
